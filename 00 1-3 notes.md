@@ -454,3 +454,256 @@ ssh -i key.pem ubuntu@13.233.xxx.xxx
 * EC2 Connect → `ssh -i key.pem user@ip`
 
 ---
+
+Here are your **clean, structured Linux + Cloud Basics Notes (Trainer + Exam Ready)** 📘
+
+---
+
+# 🔐 SSH (Secure Shell)
+
+* **Protocol:** Secure remote login
+* **Port:** `22`
+* Used to connect to remote servers (Linux VM, EC2, Azure VM)
+
+### 🔹 SSH Commands
+
+```bash
+ssh -i "key.pem" ec2-user@ec2-18-234-44-85.compute-1.amazonaws.com
+ssh atul@20.127.204.131
+```
+
+### 🔹 Key Points
+
+* `-i` → identity file (private key)
+* Default users:
+
+  * AWS → `ec2-user`, `ubuntu`
+  * Azure → custom username (e.g., atul)
+
+---
+
+# 🔐 Linux Permissions
+
+| Permission  | Value |
+| ----------- | ----- |
+| Read (r)    | 4     |
+| Write (w)   | 2     |
+| Execute (x) | 1     |
+
+### Example:
+
+* `7 = rwx`
+* `6 = rw-`
+* `4 = r--`
+
+---
+
+# 📦 Package Management (RHEL / Amazon Linux)
+
+### 🔹 Commands
+
+```bash
+sudo yum update -y
+sudo yum install python -y
+python --version
+
+sudo yum install git -y
+git --version
+
+sudo yum install tree -y
+tree --version
+
+sudo yum search java
+```
+
+### 🔹 Notes
+
+* `yum` → package manager for RPM-based OS
+* Used in:
+
+  * RHEL
+  * CentOS
+  * Fedora
+  * Amazon Linux
+
+---
+
+# 📁 File & Directory Commands
+
+```bash
+mkdir project      # create folder
+cd project         # change directory
+touch a.txt        # create file
+ls                 # list files
+ls -la             # detailed list (hidden + permissions)
+```
+
+---
+
+# 💻 PowerShell (Windows Commands)
+
+```powershell
+New-Item helloworld.txt
+mkdir new
+notepad helloworld.txt
+code .
+code helloworld.txt
+```
+
+---
+
+# ☁️ Cloud Platforms
+
+* Amazon Web Services → [https://aws.amazon.com](https://aws.amazon.com)
+* Microsoft Azure → [https://portal.azure.com](https://portal.azure.com)
+* Google Cloud Platform → [https://cloud.google.com](https://cloud.google.com)
+
+---
+
+# ☁️ Compute Services (Interview Important)
+
+| Cloud | Service                |
+| ----- | ---------------------- |
+| AWS   | Amazon EC2             |
+| Azure | Azure Virtual Machines |
+| GCP   | Google Compute Engine  |
+
+---
+
+# 🐧 Linux Basics
+
+### 🔹 What is Linux?
+
+* Open-source operating system
+* Based on Unix
+* Used in **~90% of servers**
+
+---
+
+# 🧠 Linux Kernel
+
+* Core component of OS
+* Manages:
+
+  * CPU
+  * Memory
+  * Devices
+  * Processes
+
+👉 **Definition (Exam):**
+
+> Kernel is the core of Linux that acts as a bridge between hardware and software.
+
+---
+
+# 🐧 Types of Linux (Distros)
+
+### 🔹 Debian-Based (APT / .deb)
+
+* Ubuntu
+* Debian
+* Kali Linux
+
+### 🔹 RPM-Based (YUM / DNF / .rpm)
+
+* RHEL (Red Hat Enterprise Linux)
+* CentOS
+* Fedora
+* Amazon Linux
+
+👉 **Important:**
+
+* Ubuntu → `.deb`
+* RHEL → `.rpm`
+
+---
+
+# 📦 Package Manager
+
+| OS Type | Package Manager |
+| ------- | --------------- |
+| Debian  | `apt`           |
+| RHEL    | `yum` / `dnf`   |
+
+---
+
+# ☁️ Amazon Linux
+
+* Based on **RHEL (RPM)**
+* Uses:
+
+  * `yum` (Amazon Linux 2)
+  * `dnf` (new versions)
+
+---
+
+# ☁️ Azure VM OS
+
+* Supports:
+
+  * Ubuntu (Debian-based)
+  * RHEL (RPM-based)
+* Most common: **Ubuntu**
+
+---
+
+# 🧾 Ubuntu Versions
+
+* `24.04` → LTS (Long Term Support) ✅
+* `22.04` → LTS (production stable)
+* Non-LTS (like `.07`) → short support
+
+---
+
+# 🧾 RHEL Versions
+
+* RHEL 8
+* RHEL 9
+* RHEL 10 (latest)
+
+---
+
+# 🖥️ Virtualization (Hypervisor)
+
+### 🔹 Type 1 (Bare Metal)
+
+* Runs directly on hardware
+* Example:
+
+  * VMware ESXi
+  * Hyper-V
+
+### 🔹 Type 2 (Hosted)
+
+* Runs on OS
+* Example:
+
+  * VirtualBox
+  * VMware Workstation
+
+---
+
+# 🧱 Architecture
+
+```
+Application
+----------
+Guest OS
+----------
+Hypervisor
+----------
+Hardware (Bare Metal)
+```
+
+---
+
+# ⚡ Quick Interview Questions (Revision)
+
+* What is SSH? → Secure remote login protocol (port 22)
+* Difference between `.deb` and `.rpm`?
+* What is kernel?
+* What is EC2 / Azure VM / Compute Engine?
+* Difference between Type 1 and Type 2 hypervisor?
+* What is `yum` vs `apt`?
+
+---
