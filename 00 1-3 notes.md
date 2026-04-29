@@ -279,3 +279,178 @@ nano file.txt
 5. How to connect EC2 instance?
 
 ---
+## 🔹 What is Linux Kernel?
+
+The **Linux Kernel** is the **core component of the Linux Operating System**.
+
+👉 It acts as a **bridge between hardware and software**.
+
+### Key Responsibilities:
+
+* 🧠 Process Management (CPU scheduling)
+* 💾 Memory Management (RAM allocation)
+* 📦 Device Management (drivers)
+* 📁 File System Management
+* 🔐 Security & Access Control
+
+👉 Without kernel → OS cannot function.
+
+**One-liner (Interview):**
+👉 *Kernel is the core of Linux OS that manages hardware resources and enables communication between software and hardware.*
+
+---
+
+## 🔹 Difference: Absolute Path vs Relative Path
+
+| Feature     | Absolute Path                   | Relative Path                |
+| ----------- | ------------------------------- | ---------------------------- |
+| Definition  | Full path from root (`/`)       | Path from current directory  |
+| Starts with | `/`                             | Not `/`                      |
+| Dependency  | Independent of current location | Depends on current directory |
+| Example     | `/home/atul/file.txt`           | `documents/file.txt`         |
+
+### Quick Example:
+
+```bash
+pwd
+/home/atul
+
+# Absolute
+cd /var/log
+
+# Relative
+cd ../documents
+```
+
+**One-liner (Interview):**
+👉 *Absolute path starts from root, relative path starts from current directory.*
+
+---
+
+## 🔹 vi Editor Modes
+
+The vi editor has **3 main modes**:
+
+### 1️⃣ Command Mode (Default)
+
+* Used for navigation & commands
+* Press `Esc` to enter
+* Examples:
+
+  * `dd` → delete line
+  * `yy` → copy
+  * `/word` → search
+
+---
+
+### 2️⃣ Insert Mode
+
+* Used for typing/editing text
+* Press:
+
+  * `i` → insert before cursor
+  * `a` → insert after cursor
+  * `o` → new line
+
+---
+
+### 3️⃣ Visual Mode
+
+* Used for selecting text
+* Press:
+
+  * `v` → character selection
+  * `V` → line selection
+
+---
+
+### Save & Exit:
+
+```bash
+:w   # save
+:q   # quit
+:wq  # save and quit
+:q!  # force quit
+```
+
+**One-liner (Interview):**
+👉 *vi has Command, Insert, and Visual modes for editing and navigation.*
+
+---
+
+## 🔹 Difference: `/home` vs `/root`
+
+| Feature  | `/home`                          | `/root`                     |
+| -------- | -------------------------------- | --------------------------- |
+| Purpose  | Home directories of normal users | Home directory of root user |
+| Access   | All users                        | Only root user              |
+| Example  | `/home/atul`                     | `/root`                     |
+| Security | Less privileged                  | Highly privileged           |
+
+### Explanation:
+
+* `/home` → contains directories for users (like `/home/atul`)
+* `/root` → default home for **superuser (root)**
+
+**One-liner (Interview):**
+👉 */home is for normal users, /root is for admin (root user).*
+
+---
+
+## 🔹 How to Connect EC2 Instance (Linux)
+
+Using Amazon Web Services EC2:
+
+### Step 1: Set Permission for Key
+
+```bash
+chmod 400 key.pem
+```
+
+---
+
+### Step 2: Connect via SSH
+
+```bash
+ssh -i key.pem ubuntu@<public-ip>
+```
+
+### Example:
+
+```bash
+ssh -i key.pem ubuntu@13.233.xxx.xxx
+```
+
+---
+
+### Default Usernames:
+
+| AMI          | Username |
+| ------------ | -------- |
+| Ubuntu       | ubuntu   |
+| Amazon Linux | ec2-user |
+| RHEL         | ec2-user |
+
+---
+
+### Ports Required:
+
+* SSH → **22** (must be open in Security Group)
+
+---
+
+**One-liner (Interview):**
+👉 *Use SSH with private key and public IP to connect to EC2.*
+
+---
+
+## 🔥 Quick Revision (Exam Ready)
+
+* Kernel → Core of OS
+* Absolute Path → Starts from `/`
+* Relative Path → From current directory
+* vi Modes → Command, Insert, Visual
+* `/home` → Users | `/root` → Admin
+* EC2 Connect → `ssh -i key.pem user@ip`
+
+---
